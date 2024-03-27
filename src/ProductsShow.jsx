@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 export function ProductsShow(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,10 +26,10 @@ export function ProductsShow(props) {
           Description: <input defaultValue={props.product.description} name="description" type="text" />
         </div>
         <div>
-          Price: <input defaultValue={props.product.price} name="price" type="text" />
+          Price: <input defaultValue={props.product.price} name="price" type="integer" />
         </div>
         <div>
-          Image: <input defaultValue={props.product.image} name="image" type="text" />
+          Image: <input defaultValue={props.product.image} name="image" type="string" />
         </div>
         <button type="submit">Update product</button>
       </form>

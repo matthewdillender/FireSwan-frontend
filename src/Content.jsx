@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { ProductsIndex } from "./ProductsIndex";
@@ -18,13 +19,13 @@ export function Content() {
     });
   };
 
-  const handleCreateProduct = (params, successCallback) => {
+  function handleCreateProduct(params, successCallback) {
     console.log("handleCreateProduct", params);
     axios.post("http://localhost:3000/products.json", params).then((response) => {
       setProducts([...products, response.data]);
       successCallback();
     });
-  };
+  }
 
   const handleShowProduct = (product) => {
     console.log("handleShowProduct", product);

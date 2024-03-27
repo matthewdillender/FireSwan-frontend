@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export function ProductsNew(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,13 +15,13 @@ export function ProductsNew(props) {
           Name: <input name="name" type="text" />
         </div>
         <div>
-          Url: <input name="url" type="text" />
+          Image: <input name="image" type="string" />
         </div>
         <div>
-          Width: <input name="width" type="text" />
+          Description: <input name="description" type="text" />
         </div>
         <div>
-          Height: <input name="height" type="text" />
+          Price: <input name="price" type="integer" />
         </div>
         <button type="submit">Create product</button>
       </form>
